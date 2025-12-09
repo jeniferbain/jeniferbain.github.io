@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>2-Day CRC Risk Adjustment Boot Camp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="2-Day CRC Risk Adjustment Boot Camp to help you master HCC coding, risk adjustment models, and pass the CRC exam with confidence." />
+  <style>
+    :root {
+      --primary: #0b6078;
+      --primary-light: #e5f3f6;
+      --dark: #12313a;
+      --text: #333333;
+      --bg: #ffffff;
+      --muted: #666666;
+      --radius: 8px;
+      --shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header, section, footer {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      color: var(--dark);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top left, var(--primary-light), #ffffff);
+      text-align: left;
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      align-items: center;
+    }
+
+    .hero-badges {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 22px;
+    }
+
+    .hero-badges li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-badges li::before {
+      content: "✔";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 0.98rem;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, color 0.12s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .hero-meta {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 20px 20px 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid #f0f0f0;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .hero-card ul {
+      padding-left: 18px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    /* Sections */
+    .section-muted {
+      background: #fafafa;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 18px 18px 20px;
+      border: 1px solid #f2f2f2;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    }
+
+    .card h3 {
+      margin-bottom: 6px;
+    }
+
+    .card ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 28px;
+    }
+
+    ul.simple {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .pill-list li {
+      margin-bottom: 4px;
+    }
+
+    .pill-list li::marker {
+      color: var(--primary);
+    }
+
+    .pricing-box {
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 26px 20px;
+      border-radius: var(--radius);
+      border: 1px solid #e6eef0;
+      box-shadow: var(--shadow);
+      background: #ffffff;
+    }
+
+    .price {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 6px 0 4px;
+      color: var(--primary);
+    }
+
+    .price-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .quote {
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+      margin: 12px 0;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.96rem;
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+    }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      background: #0b1720;
+      color: #d7e1e4;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header, section, footer {
+        padding: 45px 18px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="badge-pill">Live Online • 2 Days</span>
+        <h1>2-Day CRC Risk Adjustment Boot Camp</h1>
+        <p class="lead">
+          Become a Certified Risk Adjustment Coder faster with a live, intensive weekend boot camp focused on HCC coding, risk adjustment models, and CRC exam strategy.
+        </p>
+
+        <ul class="hero-badges">
+          <li>Live, instructor-led 2-day online training</li>
+          <li>Master HCC coding, documentation, and risk scores</li>
+          <li>CRC exam prep, strategies, and practice questions</li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="#enroll" class="btn btn-primary">Enroll in the CRC Boot Camp</a>
+          <a href="#free-crc-questions" class="btn btn-outline">Download Free CRC Practice Questions</a>
+        </div>
+
+        <div class="hero-meta">
+          Live online • 2 days • 8 hours per day • Designed for real-world risk adjustment coders
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <span class="badge-pill">Next Session</span>
+        <h3>Weekend CRC Intensive</h3>
+        <p style="font-size:0.95rem; color:var(--muted);">
+          A focused, practical weekend training that walks you step-by-step through HCC coding, risk adjustment models, and exam prep.
+        </p>
+        <ul>
+          <li>Day 1: Foundations of risk adjustment &amp; HCCs</li>
+          <li>Day 2: Scoring, advanced cases &amp; CRC exam strategy</li>
+          <li>Live Q&amp;A and CRC-style practice questions</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <!-- WHAT YOU'LL LEARN -->
+  <section id="what-youll-learn">
+    <div class="container">
+      <h2>What You’ll Learn in the CRC Boot Camp</h2>
+      <p class="lead">
+        This 2-day CRC Risk Adjustment Boot Camp is designed to give you the knowledge, skills, and confidence to pass the CRC exam and succeed as a risk adjustment coder.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>HCC Coding &amp; Documentation</h3>
+          <ul>
+            <li>Core concepts of Hierarchical Condition Categories (HCCs)</li>
+            <li>ICD-10-CM specificity for chronic conditions</li>
+            <li>Common documentation gaps and how to address them</li>
+            <li>Real-world chart examples and coding scenarios</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Risk Adjustment Models</h3>
+          <ul>
+            <li>Introduction to risk adjustment and why it matters</li>
+            <li>CMS-HCC and HHS-HCC models explained</li>
+            <li>How risk scores are calculated and applied</li>
+            <li>Case-based practice with score impact</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>CRC Exam Strategy</h3>
+          <ul>
+            <li>CRC exam format and question types</li>
+            <li>Time management and test-taking strategies</li>
+            <li>50–100 CRC-style practice questions</li>
+            <li>Personalized Q&amp;A and exam readiness tips</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2-DAY BREAKDOWN -->
+  <section id="schedule" class="section-muted">
+    <div class="container">
+      <h2>2-Day CRC Boot Camp Breakdown</h2>
+
+      <div class="two-col">
+        <div>
+          <h3>Day 1 – Foundations of Risk Adjustment &amp; HCC Coding</h3>
+          <ul class="simple">
+            <li>Overview of risk adjustment and value-based care</li>
+            <li>Understanding HCC categories and clinical concepts</li>
+            <li>ICD-10-CM guidelines for chronic conditions</li>
+            <li>Documentation requirements and query best practices</li>
+            <li>Hands-on case exercises to reinforce learning</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Day 2 – Scoring, Advanced Cases &amp; CRC Exam Prep</h3>
+          <ul class="simple">
+            <li>Risk score calculation and financial impact</li>
+            <li>Advanced HCC coding case studies</li>
+            <li>CRC exam blueprint and content review</li>
+            <li>CRC-style practice questions and group discussion</li>
+            <li>Test-taking strategies, tips, and live Q&amp;A</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top:16px; color:var(--muted); max-width:800px;">
+        By the end of Day 2, you’ll have a clear plan for passing the CRC exam and applying risk adjustment coding in real-world settings.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="who-its-for">
+    <div class="container">
+      <h2>Who This CRC Boot Camp Is For</h2>
+      <p>
+        This training is ideal for coders and healthcare professionals who want to specialize in risk adjustment or prepare for the AAPC CRC certification.
+      </p>
+      <ul class="simple pill-list">
+        <li>Medical coders looking to move into risk adjustment</li>
+        <li>Current risk adjustment coders wanting the CRC credential</li>
+        <li>CDI and quality professionals working with HCCs</li>
+        <li>Auditors and compliance specialists</li>
+        <li>Coding students preparing to sit for the CRC exam</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section id="whats-included" class="section-muted">
+    <div class="container">
+      <h2>What’s Included in the Boot Camp</h2>
+      <ul class="simple pill-list">
+        <li>16 hours of live, instructor-led training over 2 days</li>
+        <li>Downloadable slide decks and reference materials</li>
+        <li>CRC practice questions and case-based exercises</li>
+        <li>Step-by-step breakdown of risk adjustment models</li>
+        <li>Exam preparation checklist and suggested study plan</li>
+        <li>Certificate of completion</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="enroll">
+    <div class="container">
+      <h2 style="text-align:center;">CRC Boot Camp Tuition</h2>
+      <p style="text-align:center; max-width:600px; margin:0 auto 24px;">
+        Invest in your career and earn your CRC credential with focused, practical training.
+      </p>
+
+      <div class="pricing-box">
+        <!-- Replace this price with your real price -->
+        <div class="price">$XXX</div>
+        <div class="price-note">
+          Includes 2 full days of training, digital materials, CRC practice questions, and live Q&amp;A.
+        </div>
+        <div style="margin-top:20px;">
+          <!-- Replace # with your checkout link -->
+          <a href="#" class="btn btn-primary">Enroll Now</a>
+        </div>
+        <div class="price-note" style="margin-top:10px;">
+          Limited spots available to keep the boot camp interactive and personalized.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR -->
+  <section id="about-instructor" class="section-muted">
+    <div class="container two-col">
+      <div>
+        <!-- Placeholder for photo if you want to add an <img> -->
+        <h2>Meet Your Instructor</h2>
+        <p>
+          <strong>Jenifer</strong> is an experienced risk adjustment coding professional and educator who has helped coders strengthen their HCC coding skills and prepare for the CRC exam.
+        </p>
+        <p>
+          With a background in medical coding, auditing, and training, she brings real-world examples and clear explanations to every session. Her teaching style is practical, supportive, and focused on building your confidence as a risk adjustment coder.
+        </p>
+        <p>
+          In this 2-day CRC Boot Camp, Jenifer will walk you through the key concepts, documentation requirements, and exam strategies you need to succeed.
+        </p>
+      </div>
+      <div>
+        <h3>What Students Are Saying</h3>
+        <div class="quote">
+          “This boot camp finally made HCC coding click for me. I feel prepared for the CRC now.”
+        </div>
+        <div class="quote">
+          “Clear, organized, and full of real examples. I wish I’d had this before I started risk adjustment.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE QUESTIONS / LEAD -->
+  <section id="free-crc-questions">
+    <div class="container">
+      <h2>Get Free CRC Practice Questions</h2>
+      <p>
+        Not ready to enroll yet? Start with a free set of CRC-style practice questions to test your knowledge and see what the exam is like.
+        Enter your email on your opt-in form to receive a downloadable PDF of CRC practice questions.
+      </p>
+      <p style="font-size:0.95rem; color:var(--muted);">
+        <em>On your real site, connect this section to your email marketing tool (e.g., Squarespace form, ConvertKit, MailerLite, etc.).</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-muted">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Is a 2-day boot camp enough to prepare for the CRC exam?</h3>
+        <p>
+          This boot camp is designed to give you a strong foundation in HCC coding and risk adjustment, plus a clear exam preparation plan. Many students use this as their main prep and then review the materials and practice questions afterward.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need prior coding experience?</h3>
+        <p>
+          Basic familiarity with ICD-10-CM is recommended, but the content is taught in a clear, step-by-step way so newer coders can follow along. If you’re unsure, you can contact us to see if this boot camp is a good fit.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is this training live or self-paced?</h3>
+        <p>
+          The CRC Boot Camp is delivered live online over two days. If replays are offered, you can access them for a limited time after the event.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will I receive practice questions?</h3>
+        <p>
+          Yes. You will receive CRC-style practice questions and case-based exercises to help reinforce what you learn and get comfortable with the exam format.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I join the live sessions?</h3>
+        <p>
+          After you enroll, you’ll receive a confirmation email with the schedule, live session link, and instructions for joining on the day of the boot camp.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="final-cta">
+    <div class="container" style="text-align:center;">
+      <h2>Ready to Level Up Your Risk Adjustment Coding?</h2>
+      <p style="max-width:650px; margin:0 auto 20px;">
+        Join the 2-Day CRC Risk Adjustment Boot Camp and take a focused, practical approach to mastering HCC coding and preparing for the CRC exam.
+      </p>
+      <!-- Replace # with your checkout link -->
+      <a href="#" class="btn btn-primary">Reserve My Seat Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> CRC Risk Adjustment Boot Camp • All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
