@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provider Documentation Education | MediCode Bootcamp</title>
+  <meta name="description" content="Practical provider documentation education for physician practices, coding teams, and healthcare organizations focused on chronic condition capture, risk adjustment, documentation accuracy, and audit readiness." />
+  <link rel="canonical" href="https://medicodebootcamp.com/provider-documentation-education.html" />
+  <meta property="og:title" content="Provider Documentation Education | MediCode Bootcamp" />
+  <meta property="og:description" content="Practical, provider-friendly education that helps documentation accurately reflect chronic conditions and patient complexity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://medicodebootcamp.com/provider-documentation-education.html" />
+  <style>
+    :root {
+      --navy: #0b2d4d;
+      --blue: #0f6f91;
+      --light-blue: #eaf6fb;
+      --gold: #d9a441;
+      --ink: #172434;
+      --muted: #5d6a78;
+      --white: #ffffff;
+      --border: #dce6ec;
+      --shadow: 0 12px 35px rgba(11, 45, 77, 0.10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.92rem;
+      text-align: center;
+      padding: 8px 16px;
+    }
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 24px;
+    }
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--navy);
+      letter-spacing: -.02em;
+    }
+    .brand span { color: var(--blue); }
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    nav a { text-decoration: none; font-weight: 700; font-size: .95rem; }
+    nav a:hover { color: var(--blue); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--gold); color: #1f2b37; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(217,164,65,.3); }
+    .btn-secondary { border-color: var(--white); color: var(--white); }
+    .btn-secondary:hover { background: var(--white); color: var(--navy); }
+    .btn-outline { border-color: var(--blue); color: var(--blue); }
+    .btn-outline:hover { background: var(--blue); color: var(--white); }
+
+    .hero {
+      background:
+        radial-gradient(circle at 88% 25%, rgba(217,164,65,.18), transparent 25%),
+        linear-gradient(135deg, var(--navy), #075675);
+      color: var(--white);
+      padding: 86px 0 78px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 800;
+      color: #bde7f6;
+      font-size: .78rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.35rem, 5vw, 4.3rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      max-width: 850px;
+    }
+    .hero p {
+      font-size: 1.18rem;
+      max-width: 760px;
+      color: #e5f2f7;
+      margin: 0 0 28px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-card {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 24px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 25px 60px rgba(0,0,0,.18);
+    }
+    .hero-card h2 { margin-top: 0; font-size: 1.35rem; }
+    .checklist { list-style: none; padding: 0; margin: 18px 0 0; }
+    .checklist li { margin: 12px 0; padding-left: 28px; position: relative; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; color: #ffd77f; font-weight: 900; }
+
+    section { padding: 78px 0; }
+    .section-light { background: #f7fafc; }
+    .section-blue { background: var(--light-blue); }
+    .section-heading { max-width: 760px; margin-bottom: 38px; }
+    .section-heading.center { text-align: center; margin-left: auto; margin-right: auto; }
+    h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.18; margin: 0 0 14px; color: var(--navy); letter-spacing: -.025em; }
+    h3 { color: var(--navy); margin-top: 0; }
+    .lead { font-size: 1.1rem; color: var(--muted); }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    .card p { color: var(--muted); margin-bottom: 0; }
+
+    .audience-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px 26px;
+      padding: 0;
+      list-style: none;
+    }
+    .audience-list li {
+      padding: 13px 16px 13px 44px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      position: relative;
+    }
+    .audience-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 16px;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .signature {
+      border-left: 5px solid var(--gold);
+      background: var(--white);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+    .signature .label { color: var(--blue); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; font-size: .78rem; }
+    .signature h3 { font-size: 1.8rem; margin: 8px 0 10px; }
+
+    .steps { counter-reset: step; }
+    .step { position: relative; padding-left: 74px; margin-bottom: 30px; }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 32px;
+      align-items: center;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 42px;
+    }
+    .initials {
+      width: 170px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: auto;
+      background: linear-gradient(135deg, var(--gold), #f3d68d);
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 3rem;
+      border: 8px solid rgba(255,255,255,.16);
+    }
+    .about-box h2 { color: var(--white); }
+    .about-box p { color: #dcebf1; }
+
+    .cta {
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+      color: var(--white);
+      text-align: center;
+      border-radius: 26px;
+      padding: 52px 28px;
+    }
+    .cta h2 { color: var(--white); }
+    .cta p { max-width: 720px; margin: 0 auto 24px; color: #e2f1f6; }
+
+    .faq details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .faq summary { font-weight: 800; color: var(--navy); cursor: pointer; }
+    .faq p { color: var(--muted); }
+
+    footer {
+      background: #071f35;
+      color: #d8e6ed;
+      padding: 38px 0;
+    }
+    .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    footer a { color: var(--white); }
+
+    @media (max-width: 850px) {
+      .hero-grid, .grid-3, .grid-2, .about-box { grid-template-columns: 1fr; }
+      .hero { padding-top: 58px; }
+      nav ul { display: none; }
+      .audience-list { grid-template-columns: 1fr; }
+      .footer-grid { flex-direction: column; text-align: center; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Provider Documentation Education",
+    "provider": {
+      "@type": "Organization",
+      "name": "MediCode Bootcamp",
+      "url": "https://medicodebootcamp.com/"
+    },
+    "description": "Practical provider documentation education for physician practices, coding teams, and healthcare organizations focused on chronic condition capture, risk adjustment, documentation accuracy, and audit readiness.",
+    "areaServed": "United States",
+    "serviceType": "Healthcare documentation education and training"
+  }
+  </script>
+</head>
+<body>
+  <div class="topbar">Virtual education available for physician practices and healthcare organizations</div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">MediCode <span>Bootcamp</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#audience">Who It’s For</a></li>
+          <li><a href="#about">Instructor</a></li>
+          <li><a class="btn btn-outline" href="#contact">Request Information</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Provider Documentation Education</span>
+          <h1>Helping documentation accurately reflect chronic conditions and patient complexity.</h1>
+          <p>Practical, provider-friendly education for physician practices, coding teams, and healthcare organizations focused on documentation accuracy, chronic condition capture, risk adjustment, and audit readiness.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Discuss a Training Session</a>
+            <a class="btn btn-secondary" href="#signature-session">View the Signature Session</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Training highlights">
+          <h2>Education designed for busy healthcare teams</h2>
+          <ul class="checklist">
+            <li>Clear, practical explanations—not coder-heavy lectures</li>
+            <li>Realistic documentation examples and common gaps</li>
+            <li>Virtual lunch-and-learns and team workshops</li>
+            <li>Content tailored to the organization and audience</li>
+            <li>Compliance-focused and centered on accurate documentation</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow" style="color:var(--blue)">The goal</span>
+          <h2>Turn complicated risk adjustment concepts into practical documentation habits.</h2>
+          <p class="lead">Providers should not be expected to become coders. Education should help them understand how clear, specific, clinically supported documentation reflects the care delivered and gives coding teams the information they need.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Improve documentation clarity</h3>
+            <p>Help providers document chronic conditions, status, evaluation, and management in a clear and supportable way.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Strengthen collaboration</h3>
+            <p>Bridge communication gaps among providers, coders, auditors, educators, and practice leadership.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Support audit readiness</h3>
+            <p>Reinforce documentation integrity and reduce reliance on vague, copied-forward, or unsupported diagnoses.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-blue" id="signature-session">
+      <div class="container grid-2">
+        <div class="signature">
+          <div class="label">Signature introductory session</div>
+          <h3>Documentation Practices Affecting Chronic Condition Capture</h3>
+          <p>A focused virtual lunch-and-learn designed to help healthcare teams recognize common documentation gaps and understand why accurate chronic condition documentation matters.</p>
+          <a class="btn btn-primary" href="#contact">Ask About This Session</a>
+        </div>
+        <div>
+          <h2>Potential learning topics</h2>
+          <ul class="audience-list">
+            <li>Risk adjustment and RAF in plain language</li>
+            <li>Why chronic conditions require current documentation</li>
+            <li>Documentation supportability and MEAT concepts</li>
+            <li>Specificity, status, and condition relationships</li>
+            <li>Common documentation vulnerabilities</li>
+            <li>Practical examples for busy providers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" style="color:var(--blue)">Who it’s for</span>
+          <h2>Training for the people responsible for documentation quality and provider education.</h2>
+          <p class="lead">Sessions can be coordinated by practice leaders or education teams and adapted for provider, coding, or mixed audiences.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Physician practices</h3><p>Independent and multi-provider practices seeking concise, practical education for physicians, nurse practitioners, and physician assistants.</p></article>
+          <article class="card"><h3>Coding and risk adjustment teams</h3><p>Managers and teams working to improve documentation communication, coding accuracy, and chronic condition capture.</p></article>
+          <article class="card"><h3>Provider education and CDI teams</h3><p>Organizations that need an outside educator, guest speaker, or customized session supporting existing documentation initiatives.</p></article>
+          <article class="card"><h3>Practice managers</h3><p>Operational leaders looking for education that is relevant, accessible, and respectful of provider workflow.</p></article>
+          <article class="card"><h3>Population health and quality teams</h3><p>Teams working in value-based care environments where accurate documentation of patient complexity matters.</p></article>
+          <article class="card"><h3>Healthcare organizations</h3><p>Groups seeking virtual training, annual refreshers, onboarding education, or topic-specific documentation workshops.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow" style="color:var(--blue)">Flexible formats</span>
+          <h2>Start with one session. Build from there.</h2>
+          <p class="lead">Organizations can begin with a short introductory program and expand based on team needs and feedback.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Virtual lunch-and-learn</h3><p>A focused 30- to 60-minute session for an existing provider or team meeting.</p></div>
+          <div class="step"><h3>Customized workshop</h3><p>A longer session centered on selected conditions, common documentation gaps, or internal education priorities.</p></div>
+          <div class="step"><h3>Ongoing education</h3><p>Quarterly refreshers, provider onboarding, documentation Q&amp;A, or recurring topic-based training.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-box">
+          <div class="initials" aria-label="Jenifer Bain initials">JB</div>
+          <div>
+            <span class="eyebrow">About the instructor</span>
+            <h2>Jenifer Bain</h2>
+            <p>Jenifer is a medical coding educator specializing in risk adjustment, HCC documentation, ICD-10-CM, chronic condition capture, and practical education for healthcare professionals. Through MediCode Bootcamp, she translates complex coding and documentation concepts into clear, real-world instruction.</p>
+            <p>Her teaching approach is collaborative and compliance-focused, with an emphasis on documentation that accurately represents the patient and the care provided.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" style="color:var(--blue)">Frequently asked questions</span>
+          <h2>About provider documentation training</h2>
+        </div>
+        <details><summary>Is this a coding class for physicians?</summary><p>No. The education is provider-friendly and focused on practical documentation habits, clinical support, chronic condition capture, and the connection between documentation and accurate coding.</p></details>
+        <details><summary>Can a session be delivered virtually?</summary><p>Yes. Virtual lunch-and-learns and workshops can be scheduled for practices and healthcare teams across the United States.</p></details>
+        <details><summary>Can the presentation be customized?</summary><p>Yes. Topics, examples, length, and audience level can be adapted to the organization’s priorities.</p></details>
+        <details><summary>Who should coordinate the session?</summary><p>Common contacts include coding managers, risk adjustment leaders, provider educators, CDI leaders, practice managers, population health teams, and revenue cycle leadership.</p></details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <h2>Interested in provider documentation education for your team?</h2>
+          <p>Start with a conversation about your audience, training goals, preferred format, and the documentation challenges your organization is seeing.</p>
+          <a class="btn btn-primary" href="mailto:jeniferbain@icloud.com?subject=Provider%20Documentation%20Education%20Inquiry">Request Information</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>MediCode Bootcamp</strong><br />Practical education. Real-world impact.</div>
+      <div><a href="https://medicodebootcamp.com/">medicodebootcamp.com</a></div>
+      <div>&copy; <span id="year"></span> MediCode Bootcamp</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
