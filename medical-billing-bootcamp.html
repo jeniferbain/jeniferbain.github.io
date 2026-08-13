@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+   <style>
+      :root {
+        --primary: #0b6078;
+        --primary-light: #e5f3f6;
+        --dark: #12313a;
+        --text: #333333;
+        --bg: #ffffff;
+        --muted: #666666;
+        --radius: 8px;
+        --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      header,
+      section,
+      footer {
+        padding: 60px 20px;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+        color: var(--dark);
+      }
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+      p.lead {
+        font-size: 1.1rem;
+        color: var(--muted);
+        max-width: 760px;
+      }
+      .hero {
+        background: radial-gradient(circle at top left, var(--primary-light), #ffffff);
+      }
+      .hero-inner {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr);
+        align-items: center;
+      }
+      .hero-badges {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 22px;
+      }
+      .hero-badges li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+        color: var(--muted);
+        font-size: 0.97rem;
+      }
+      .hero-badges li::before {
+        content: "✔";
+        color: var(--primary);
+        font-weight: bold;
+      }
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0 10px;
+      }
+      .btn {
+        display: inline-block;
+        font-size: 0.98rem;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, color 0.12s ease;
+      }
+      .btn-primary {
+        background: var(--primary);
+        color: #ffffff;
+        box-shadow: var(--shadow);
+      }
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+      }
+      .btn-outline {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: var(--primary-light);
+        text-decoration: none;
+      }
+      .hero-card {
+        background: #ffffff;
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+        border: 1px solid #f0f0f0;
+      }
+      .hero-card ul {
+        padding-left: 18px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .badge-pill {
+        display: inline-block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: var(--primary-light);
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+      .hero-meta {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+      .section-muted {
+        background: #fafafa;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .card {
+        background: #ffffff;
+        border-radius: var(--radius);
+        padding: 18px 18px 20px;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      }
+      .card ul {
+        margin-top: 10px;
+        padding-left: 18px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 28px;
+      }
+      ul.simple {
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      .simple.pill-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 20px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .simple.pill-list li {
+        background: #f3f4f6;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+      .pricing-box {
+        max-width: 460px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 28px 22px;
+        border-radius: var(--radius);
+        border: 1px solid #e6eef0;
+        box-shadow: var(--shadow);
+        background: #ffffff;
+      }
+      .price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 6px 0 4px;
+        color: var(--primary);
+      }
+      .price-note {
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .urgency {
+        margin-top: 14px;
+        font-size: 0.95rem;
+        color: var(--dark);
+        background: var(--primary-light);
+        padding: 12px 14px;
+        border-radius: 8px;
+      }
+      .faq-item {
+        margin-bottom: 18px;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+      .quote {
+        border-left: 4px solid var(--primary);
+        padding-left: 12px;
+        margin: 12px 0;
+        color: var(--muted);
+        font-style: italic;
+        font-size: 0.96rem;
+      }
+      footer {
+        background: #0b1720;
+        color: #d7e1e4;
+        text-align: center;
+        padding: 24px 20px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 900px) {
+        .hero-inner,
+        .two-col,
+        .grid-3 {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        header,
+        section,
+        footer {
+          padding: 45px 18px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Medical Billing Boot Camp | Live Online Beginner Training</title>
+
+  <meta
+    name="description"
+    content="Live online Medical Billing Boot Camp for beginners. Learn claims, insurance, denials, payment posting, revenue cycle basics, and practical billing skills."
+  />
+
+  <link
+    rel="canonical"
+    href="https://medicodebootcamp.com/medical-billing-bootcamp.html"
+  />
+
+  <meta name="robots" content="index, follow" />
+</head>
+
+<body>
+ <!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+
+    <div>
+      <span class="badge-pill">October 10–11, 2026 • Live Online</span>
+
+      <h1>Medical Billing Boot Camp</h1>
+
+      <p class="lead">
+        Learn how medical billing works from patient registration through
+        claim submission, payment, denials, and follow-up in this live,
+        beginner-friendly 2-day training.
+      </p>
+
+      <ul class="hero-badges">
+        <li>No prior medical billing experience required</li>
+        <li>Two days of live, instructor-led online training</li>
+        <li>Practical claims, insurance, payment, and denial education</li>
+        <li>Designed for aspiring and new medical billers</li>
+      </ul>
+
+      <div class="hero-cta">
+        <a
+          href="https://tally.so/r/MeZGXl"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Reserve Your Seat — $147
+        </a>
+
+        <a href="#schedule" class="btn btn-outline">
+          See What You'll Learn
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        Saturday &amp; Sunday • 10:00 AM–5:00 PM Eastern • Live Online
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <span class="badge-pill">Inaugural Session</span>
+
+      <h2 style="font-size: 1.6rem;">Medical Billing Boot Camp Details</h2>
+
+      <p style="font-size: 0.95rem; color: var(--muted);">
+        Build a practical foundation in medical billing and learn how the
+        healthcare revenue cycle works from beginning to end.
+      </p>
+
+      <ul>
+        <li><strong>Dates:</strong> October 10–11, 2026</li>
+        <li><strong>Format:</strong> Live online</li>
+        <li><strong>Time:</strong> 10:00 AM–5:00 PM Eastern</li>
+        <li><strong>Tuition:</strong> $147 inaugural rate</li>
+        <li><strong>Experience:</strong> No prior billing experience required</li>
+      </ul>
+
+      <p style="margin-top: 16px;">
+        <a
+          href="https://tally.so/r/MeZGXl"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          Save My Seat
+        </a>
+      </p>
+    </aside>
+
+  </div>
+</header>
+
+<main>
+<section id="who-its-for">
+  <div class="container">
+  <h2>Is This Medical Billing Boot Camp for You?</h2>
+
+  <p>
+    This live Medical Billing Boot Camp is designed for beginners who want
+    practical, instructor-led training and a better understanding of how
+    medical billing works in the real world.
+  </p>
+
+  <p>This boot camp may be a great fit if you are:</p>
+
+  <ul>
+    <li>Completely new to medical billing</li>
+    <li>Considering medical billing as a new career</li>
+    <li>Currently learning medical billing and want additional hands-on practice</li>
+    <li>Working in healthcare and want to better understand the billing process</li>
+    <li>A new medical biller who wants to build confidence with claims and reimbursement</li>
+    <li>Interested in learning the revenue cycle from beginning to end</li>
+  </ul>
+
+  <p>
+    <strong>No prior medical billing experience is required.</strong>
+    We'll start with the foundations and build from there.
+  </p>
+  </div>
+</section> 
+ <section id="overview" class="section-muted">
+  <div class="container">
+  <h2>What You'll Learn</h2>
+
+  <p>
+    During this two-day live boot camp, you'll build a practical foundation
+    in the medical billing process and learn how claims move through the
+    revenue cycle from start to finish.
+  </p>
+
+  <ul>
+    <li>How the medical billing revenue cycle works</li>
+    <li>Patient registration, insurance information, and eligibility basics</li>
+    <li>Commercial insurance, Medicare, Medicaid, and patient responsibility</li>
+    <li>How ICD-10-CM, CPT, and HCPCS codes relate to medical billing</li>
+    <li>How to understand and work with the CMS-1500 claim form</li>
+    <li>Claim submission and clearinghouse basics</li>
+    <li>The difference between rejected and denied claims</li>
+    <li>How to read EOBs and ERAs</li>
+    <li>Payment posting and adjustments</li>
+    <li>Denials, corrected claims, appeals, and claim follow-up</li>
+    <li>Accounts receivable and patient balances</li>
+    <li>Basic billing compliance and HIPAA considerations</li>
+    <li>Practical billing scenarios and real-world problem solving</li>
+  </ul>
+</section>
+<section id="schedule">
+  <div class="container">
+  <h2>2-Day Medical Billing Boot Camp Schedule</h2>
+<div class="two-col">
+  <div>
+  <h3>Day 1 — Medical Billing Foundations & Claims</h3>
+  <ul>
+    <li>Understanding the revenue cycle</li>
+    <li>Patient registration and insurance basics</li>
+    <li>Eligibility and benefits verification</li>
+    <li>Medical terminology and coding basics for billers</li>
+    <li>ICD-10-CM, CPT, and HCPCS from a billing perspective</li>
+    <li>CMS-1500 claim form basics</li>
+    <li>Claim creation and submission</li>
+    <li>Clearinghouses, rejections, and clean claims</li>
+  </ul>
+  </div>
+
+  <div>
+  <h3>Day 2 — Payments, Denials & Follow-Up</h3>
+  <ul>
+    <li>EOBs and ERAs</li>
+    <li>Payment posting and adjustments</li>
+    <li>Denied claims and common denial issues</li>
+    <li>Corrected claims and appeals</li>
+    <li>Claim status and follow-up</li>
+    <li>Accounts receivable and patient balances</li>
+    <li>Billing compliance basics</li>
+    <li>Practical billing scenarios and review</li>
+  </ul>
+  </div>
+</div>
+  <p>
+    <strong>Schedule:</strong> Saturday &amp; Sunday, October 10–11, 2026,
+    from 10:00 AM–5:00 PM Eastern.
+  </p>
+    </div>
+</section>
+<section id="included" class="section-muted">
+  <div class="container">
+  <h2>What's Included With Your Registration?</h2>
+
+  <p>
+    Your Medical Billing Boot Camp registration includes:
+  </p>
+
+  <ul>
+    <li>Two days of live, instructor-led online training</li>
+    <li>Approximately 12 hours of practical medical billing education</li>
+    <li>Hands-on billing exercises and practice scenarios</li>
+    <li>Opportunities to ask questions during the live training</li>
+    <li>Training materials and resources to support your learning</li>
+    <li>Certificate of Completion</li>
+  </ul>
+
+ <div class="pricing-box">
+
+  <span class="badge-pill">Inaugural Session</span>
+
+  <div class="price">$147</div>
+
+  <div class="price-note">
+    Special introductory tuition for our first Medical Billing Boot Camp.
+  </div>
+
+  <p style="margin-top: 16px;">
+    <strong>Live Dates:</strong> October 10–11, 2026<br>
+    <strong>Time:</strong> 10:00 AM–5:00 PM Eastern<br>
+    <strong>Format:</strong> Live Online
+  </p>
+
+  <div style="margin-top: 20px;">
+    <a
+      href="https://tally.so/r/MeZGXl"
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      Reserve My Seat — $147
+    </a>
+  </div>
+
+  <div class="urgency">
+    Live instructor-led training with opportunities to ask questions,
+    practice billing concepts, and build confidence throughout the weekend.
+  </div>
+
+</div>
+  </div>
+</section>
+<section id="career">
+  <div class="container">
+  <h2>Start Building Your Medical Billing Skills</h2>
+
+  <p>
+    Medical billing can be an entry point into the healthcare revenue cycle
+    for people who are interested in working with insurance, claims,
+    reimbursement, and the business side of healthcare.
+  </p>
+
+  <p>
+    This boot camp is designed to provide practical, beginner-friendly
+    education that can help you build foundational skills as you explore
+    entry-level medical billing opportunities.
+  </p>
+
+  <p>
+    Professional billing certifications are available for individuals who
+    choose to pursue additional credentials; however, this boot camp is
+    focused on helping you understand and practice the day-to-day concepts
+    involved in medical billing.
+  </p>
+
+  <p>
+    <strong>Please note:</strong> Completion of the Medical Billing Boot Camp
+    does not guarantee employment or professional certification.
+  </p>
+     </div>
+</section>
+<section id="faq" class="section-muted">
+  <div class="container">
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Do I need prior medical billing experience?</h3>
+  <p>
+    No. This boot camp is designed to be beginner friendly and starts with
+    foundational medical billing concepts.
+  </p>
+
+  <h3>Do I need to be certified to take this boot camp?</h3>
+  <p>
+    No. You do not need a professional billing certification to participate
+    in this training.
+  </p>
+
+  <h3>Is this a certification course?</h3>
+  <p>
+    No. This Medical Billing Boot Camp provides practical training and a
+    Certificate of Completion. It does not award a professional certification.
+  </p>
+
+  <h3>How is the training delivered?</h3>
+  <p>
+    The boot camp is delivered live online, giving you the opportunity to
+    learn from an instructor, participate in exercises, and ask questions
+    during the training.
+  </p>
+
+  <h3>What dates and times is the boot camp?</h3>
+  <p>
+    The inaugural Medical Billing Boot Camp will be held Saturday and Sunday,
+    October 10–11, 2026, from 10:00 AM–5:00 PM Eastern.
+  </p>
+
+  <h3>How much is registration?</h3>
+  <p>
+    Inaugural tuition for the October 10–11, 2026 session is $147.
+  </p>
+    </div>
+</section>
+<section id="final-cta">
+  <div class="container" style="text-align: center;">
+  <h2>Ready to Get Started?</h2>
+
+  <p>
+    Join us for the inaugural Medical Billing Boot Camp and begin building
+    practical medical billing skills in a live, beginner-friendly environment.
+  </p>
+
+  <p>
+    <strong>October 10–11, 2026</strong><br>
+    10:00 AM–5:00 PM Eastern<br>
+    Live Online
+  </p>
+
+  <p>
+    <strong>Inaugural Tuition: $147</strong>
+  </p>
+
+  <p>
+   <a
+  href="https://tally.so/r/MeZGXl"
+  class="btn btn-primary"
+  target="_blank"
+  rel="noopener"
+>
+  Yes — Reserve My Seat for $147
+</a>
+  </p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 MediCode Bootcamp. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
