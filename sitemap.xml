@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-  <loc>https://medicodebootcamp.com/crc-bootcamp-may-2026.html</loc>
-  <lastmod>2026-04-20</lastmod>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://medicodebootcamp.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-
+  <url>
+    <loc>https://medicodebootcamp.com/cpc-certification-bootcamp.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/anatomy-medical-terminology-bootcamp.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/medical-billing-bootcamp.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/provider-documentation-education.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/crc-bootcamp-dates.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/crc-bootcamp-August-2026.html</loc>
+  </url>
+  <url>
+    <loc>https://medicodebootcamp.com/crc-course.html</loc>
+  </url>
   <url>
     <loc>https://medicodebootcamp.com/crc-exam-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-<url>
-  <loc>https://medicodebootcamp.com/how-to-become-a-crc.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-  
-<url>
-  <loc>https://medicodebootcamp.com/crc-bootcamp-dates.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.9</priority>
-</url>
-
+  <url>
+    <loc>https://medicodebootcamp.com/how-to-become-a-crc.html</loc>
+  </url>
 </urlset>
-
-
-
-
