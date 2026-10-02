@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Program Information | MediCode Bootcamp</title>
+  <meta name="description" content="Request information about MediCode Bootcamp medical coding, CRC, CPC, medical billing, anatomy, terminology, CEU, and provider education programs." />
+  <style>
+    :root{--primary:#0b6078;--primary-dark:#08495c;--primary-light:#e5f3f6;--navy:#102f43;--text:#2d3740;--muted:#66737c;--white:#fff;--soft:#f7fafb;--border:#dce8eb;--radius:14px;--shadow:0 14px 35px rgba(16,47,67,.09)}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--soft);line-height:1.6}a{color:var(--primary);text-decoration:none}.container{width:min(880px,calc(100% - 36px));margin:0 auto}
+    nav{background:#fff;border-bottom:1px solid var(--border)}.nav-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;color:var(--navy);font-size:1.15rem}.brand span{color:var(--primary)}
+    main{padding:60px 0 80px}.card{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:34px}.eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--primary-light);color:var(--primary-dark);font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}h1{color:var(--navy);font-size:clamp(2rem,5vw,3.3rem);line-height:1.15;margin:16px 0 12px}.lead{color:var(--muted);font-size:1.08rem;margin-bottom:26px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.full{grid-column:1/-1}label{display:block;font-weight:750;color:var(--navy);margin-bottom:7px}input,select,textarea{width:100%;font:inherit;padding:13px 14px;border:1px solid #b9cbd1;border-radius:10px;background:#fff;color:var(--text)}textarea{min-height:130px;resize:vertical}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;background:var(--primary);color:#fff;font-weight:800;padding:14px 24px;cursor:pointer;font-size:1rem}.btn:hover{background:var(--primary-dark)}.note{margin-top:18px;padding:14px 16px;border-radius:12px;background:var(--primary-light);color:var(--navy);font-size:.94rem}.alt{margin-top:28px;border-top:1px solid var(--border);padding-top:22px;color:var(--muted)}
+    footer{padding:28px 0;text-align:center;color:var(--muted);font-size:.9rem}@media(max-width:650px){.grid{grid-template-columns:1fr}.card{padding:24px}.nav-inner{flex-direction:column;align-items:flex-start;padding:14px 0}}
+  </style>
+</head>
+<body>
+<nav><div class="container nav-inner"><a class="brand" href="/">MediCode <span>Bootcamp</span></a><a href="/">Back to Home</a></div></nav>
+<main><div class="container"><div class="card">
+  <span class="eyebrow">We're happy to help</span>
+  <h1>Request Program Information</h1>
+  <p class="lead">Have questions before enrolling? Tell us which MediCode Bootcamp program you are interested in and how you would like Jenifer to contact you.</p>
+  <form id="infoForm">
+    <div class="grid">
+      <div><label for="name">Name *</label><input id="name" name="name" required autocomplete="name" /></div>
+      <div><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+      <div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+      <div><label for="contact">Preferred contact method *</label><select id="contact" name="contact" required><option value="">Choose one</option><option>Email</option><option>Text</option><option>Phone call</option></select></div>
+      <div class="full"><label for="program">Which program are you interested in? *</label><select id="program" name="program" required>
+        <option value="">Choose a program</option>
+        <option>CPC Certification Boot Camp</option>
+        <option>CPC Self-Study Course With Instructor Support</option>
+        <option>CRC Risk Adjustment Boot Camp</option>
+        <option>Self-Paced CRC Preparation Course</option>
+        <option>CRC Certification Exam Review</option>
+        <option>CRC Coding Case Study Series</option>
+        <option>Medical Billing Boot Camp</option>
+        <option>Anatomy & Medical Terminology Boot Camp</option>
+        <option>Provider Documentation Education</option>
+        <option>HCC Risk Adjustment Training for Coding Teams</option>
+        <option>Other / Not Sure Yet</option>
+      </select></div>
+      <div class="full"><label for="question">What questions do you have?</label><textarea id="question" name="question" placeholder="Tell us what you would like to know about the program, schedule, enrollment, or whether it is a good fit for you."></textarea></div>
+      <div class="full"><button class="btn" type="submit">Send My Information Request</button></div>
+    </div>
+  </form>
+  <div class="note">When you tap “Send My Information Request,” your email app will open with your information filled in and addressed to <strong>jenifermbain@gmail.com</strong>. Review it and tap Send.</div>
+  <div class="alt">Prefer to contact Jenifer directly? Call or text <a href="tel:+15742138793">(574) 213-8793</a>, or email <a href="mailto:jenifermbain@gmail.com">jenifermbain@gmail.com</a>.</div>
+</div></div></main>
+<footer>© <span id="year"></span> MediCode Bootcamp</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('infoForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const contact=document.getElementById('contact').value;
+  const program=document.getElementById('program').value;
+  const question=document.getElementById('question').value.trim();
+  const subject='Program Information Request - '+program;
+  const body=[
+    'New MediCode Bootcamp Program Information Request',
+    '',
+    'Name: '+name,
+    'Email: '+email,
+    'Phone: '+(phone || 'Not provided'),
+    'Preferred contact method: '+contact,
+    'Program: '+program,
+    '',
+    'Question:',
+    question || 'No specific question provided.'
+  ].join('\n');
+  window.location.href='mailto:jenifermbain@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
