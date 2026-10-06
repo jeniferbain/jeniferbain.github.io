@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://medicodebootcamp.com/supported-vs-unsupported-diagnoses-risk-adjustment.html" />
+<title>Supported vs Unsupported Diagnoses in Risk Adjustment | MediCode Bootcamp</title>
+<meta name="description" content="Learn how risk adjustment coders distinguish supported from unsupported diagnoses using current documentation, ICD-10-CM rules, MEAT concepts, provider documentation, and compliant chart review." />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="Supported vs Unsupported Diagnoses in Risk Adjustment" />
+<meta property="og:description" content="A practical guide to deciding whether a diagnosis is supported for coding in risk adjustment, with examples involving problem lists, medications, labs, history, and chronic conditions." />
+<meta property="og:url" content="https://medicodebootcamp.com/supported-vs-unsupported-diagnoses-risk-adjustment.html" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://medicodebootcamp.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.ico" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2XKV5HQW6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K2XKV5HQW6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Supported vs Unsupported Diagnoses in Risk Adjustment: How Coders Decide What to Report","description":"A practical guide to evaluating whether diagnoses are supported by current documentation in risk adjustment coding.","author":{"@type":"Person","name":"Jenifer Bain"},"publisher":{"@type":"EducationalOrganization","name":"MediCode Bootcamp","url":"https://medicodebootcamp.com/"},"mainEntityOfPage":"https://medicodebootcamp.com/supported-vs-unsupported-diagnoses-risk-adjustment.html"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is a diagnosis supported just because it is on the problem list?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. Coders should review the current encounter and applicable coding and risk adjustment rules to determine whether the diagnosis is supported for reporting."}},
+{"@type":"Question","name":"Can a coder infer a diagnosis from a medication?","acceptedAnswer":{"@type":"Answer","text":"Generally, a medication alone should not be used to infer a diagnosis when the provider has not documented the condition. Apply the applicable coding rules and organizational policy."}},
+{"@type":"Question","name":"Does MEAT automatically make a diagnosis reportable?","acceptedAnswer":{"@type":"Answer","text":"No. MEAT can help identify evidence that a condition was addressed, but the diagnosis must still meet applicable documentation, coding, setting, payer, and risk adjustment requirements."}}
+]}</script>
+<style>
+:root{--p:#0b6078;--pd:#08495c;--pl:#e5f3f6;--n:#102f43;--t:#2d3740;--m:#66737c;--s:#f7fafb;--b:#dce8eb;--g:#c6932f;--sh:0 14px 35px rgba(16,47,67,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--t);line-height:1.72}a{color:var(--p);text-decoration:none}a:hover{text-decoration:underline}.c{width:min(1030px,calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--b)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:1.18rem;font-weight:850;color:var(--n)}.brand span{color:var(--p)}.links{display:flex;gap:17px;flex-wrap:wrap}.links a{font-size:.92rem;font-weight:700;color:var(--n)}
+.hero{padding:78px 0 68px;background:radial-gradient(circle at 12% 15%,rgba(229,243,246,.98),transparent 40%),linear-gradient(135deg,#fff,#f7fbfc)}.eye{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pl);color:var(--pd);font-size:.78rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}h1,h2,h3{color:var(--n);line-height:1.2}h1{font-size:clamp(2.4rem,5.4vw,4.25rem);letter-spacing:-.04em;margin:18px 0}h2{font-size:clamp(1.8rem,3.7vw,2.5rem)}h3{font-size:1.28rem}.lead{font-size:1.16rem;color:var(--m);max-width:860px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none!important}.primary{background:var(--p);color:#fff}.outline{border:2px solid var(--p);background:#fff;color:var(--p)}
+section{padding:62px 0}.soft{background:var(--s)}.content{max-width:860px}.toc{background:#fff;border:1px solid var(--b);border-radius:16px;padding:24px;box-shadow:var(--sh)}.toc a{display:block;padding:5px 0;font-weight:700}.callout{background:var(--pl);border-left:5px solid var(--p);padding:24px;border-radius:12px;margin:24px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fff;border:1px solid var(--b);border-radius:16px;padding:24px}.example{background:#fff;border:1px solid var(--b);border-radius:14px;padding:22px;margin:16px 0}.supported{border-left:5px solid var(--p)}.unsupported{border-left:5px solid var(--g)}.decision{width:100%;border-collapse:collapse;background:#fff}.decision th,.decision td{border:1px solid var(--b);padding:14px;vertical-align:top;text-align:left}.decision th{background:var(--n);color:#fff}.faq{padding:18px 0;border-bottom:1px solid var(--b)}.cta{background:linear-gradient(135deg,var(--n),var(--pd));color:#fff;border-radius:22px;padding:38px}.cta h2{color:#fff}.cta p{color:#dbe8ec}.cta .btn{background:#fff;color:var(--pd);margin:5px}.small{font-size:.92rem;color:var(--m)}footer{background:#091b26;color:#d7e1e4;padding:30px;text-align:center}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.hero{padding:55px 0}.grid{grid-template-columns:1fr}.decision{display:block;overflow-x:auto}}
+</style>
+</head>
+<body>
+<nav><div class="c nav"><a class="brand" href="/">MediCode <span>Bootcamp</span></a><div class="links"><a href="/">Home</a><a href="/articles-guides.html">Articles &amp; Guides</a><a href="/learning-center.html">Learning Center</a><a href="/what-is-meat-risk-adjustment.html">MEAT Guide</a></div></div></nav>
+
+<header class="hero"><div class="c"><span class="eye">Documentation &amp; Coding Judgment</span><h1>Supported vs. Unsupported Diagnoses in Risk Adjustment</h1><p class="lead">How do risk adjustment coders decide whether a diagnosis should be reported? The answer starts with the medical record—not the HCC value. This guide walks through current documentation, problem lists, medications, labs, history, MEAT concepts, and common chart-review traps.</p><div class="actions"><a class="btn primary" href="#decision">See the Decision Process</a><a class="btn outline" href="/free-study-sessions.html">Practice With Free CRC Cases</a></div></div></header>
+
+<main>
+<section><div class="c content"><div class="toc"><strong>In this guide</strong><a href="#supported">What “supported” means</a><a href="#unsupported">What “unsupported” means</a><a href="#decision">A practical decision process</a><a href="#problem-list">Problem lists</a><a href="#medications">Medications and labs</a><a href="#history">History versus active conditions</a><a href="#meat">Where MEAT fits</a><a href="#examples">Chart-review examples</a></div></div></section>
+
+<section id="supported" class="soft"><div class="c content"><span class="eye">Supported diagnoses</span><h2>What makes a diagnosis supported?</h2>
+<p>A supported diagnosis is one that is documented in a way that meets the coding and reporting requirements that apply to the encounter. In risk adjustment, the coder should be able to connect the diagnosis to the current medical record and explain why it is appropriate to report.</p>
+<p>Support may include the provider naming the condition, describing its current status, discussing related symptoms or complications, reviewing relevant test results, monitoring the condition, continuing or changing treatment, or including the condition in the assessment and plan.</p>
+<div class="callout"><strong>The key question is not:</strong> “Does this diagnosis map to an HCC?” <strong>The key question is:</strong> “Does the current documentation support reporting this diagnosis under the applicable rules?”</div>
+</div></section>
+
+<section id="unsupported"><div class="c content"><span class="eye">Unsupported diagnoses</span><h2>What makes a diagnosis unsupported?</h2>
+<p>An unsupported diagnosis is one that does not have enough current documentation to justify reporting it under the applicable coding and risk adjustment rules.</p>
+<p>Common warning signs include an old diagnosis carried forward with no current discussion, a condition appearing only on a problem list, a coder inferring a disease from a medication or test result, a historical condition being treated as active, or documentation that is too vague to support the level of specificity selected.</p>
+<div class="grid">
+<div class="card"><h3>Supported thinking</h3><p>Read the full encounter, identify what the provider documented, verify the diagnosis code, and confirm the condition meets the applicable reporting rules.</p></div>
+<div class="card"><h3>Unsupported thinking</h3><p>Start with an HCC list, search the chart for anything that looks similar, and code the condition because it could affect the risk score.</p></div>
+</div>
+</div></section>
+
+<section id="decision" class="soft"><div class="c"><span class="eye">A practical workflow</span><h2>How should a coder decide whether to report a diagnosis?</h2>
+<table class="decision"><thead><tr><th>Step</th><th>Question to ask</th></tr></thead><tbody>
+<tr><td><strong>1. Identify the diagnosis</strong></td><td>Did an appropriate provider document the condition in the current encounter or in documentation that is valid for the coding context?</td></tr>
+<tr><td><strong>2. Review the whole note</strong></td><td>What does the assessment, plan, history, exam, medication discussion, testing, and follow-up tell you about the condition?</td></tr>
+<tr><td><strong>3. Look for current support</strong></td><td>Is the condition monitored, evaluated, assessed/addressed, treated, or otherwise clearly incorporated into current medical decision-making?</td></tr>
+<tr><td><strong>4. Verify the ICD-10-CM code</strong></td><td>Does the selected code match the provider's documentation and the required level of specificity?</td></tr>
+<tr><td><strong>5. Apply official rules</strong></td><td>Do ICD-10-CM guidelines, setting rules, payer requirements, or the applicable risk adjustment program affect whether or how the diagnosis is reported?</td></tr>
+<tr><td><strong>6. Escalate uncertainty</strong></td><td>If the documentation is unclear or conflicting, should the case be queried or escalated under your organization's policy rather than guessed?</td></tr>
+</tbody></table>
+</div></section>
+
+<section id="problem-list"><div class="c content"><span class="eye">Common trap</span><h2>Is a diagnosis supported if it is on the problem list?</h2>
+<p>Not automatically. Problem lists are useful, but they can contain conditions that are old, resolved, duplicated, nonspecific, or not addressed during the current encounter.</p>
+<p>The coder should review the current documentation to determine whether the condition is active and reportable. A problem-list entry may be part of the evidence, but it should not replace the rest of the chart-review process.</p>
+<div class="example unsupported"><strong>Example: problem list only</strong><p>The chart lists “CHF” in the problem list, but the visit note contains no current assessment, symptoms, monitoring, treatment discussion, or plan related to heart failure.</p><p><strong>Coder response:</strong> Do not assume the condition is reportable solely because it appears on the list. Review the entire record and applicable rules.</p></div>
+<div class="example supported"><strong>Example: current support</strong><p>The assessment states “Chronic systolic heart failure—stable,” the provider reviews daily weights and edema, and continues the current diuretic regimen.</p><p><strong>Coder response:</strong> The current note contains clear evidence that the condition was assessed and managed. Verify the appropriate ICD-10-CM code and applicable reporting rules.</p></div>
+</div></section>
+
+<section id="medications" class="soft"><div class="c content"><span class="eye">Medications &amp; tests</span><h2>Can a medication or lab result prove the diagnosis?</h2>
+<p>A medication can support the clinical picture, but a coder generally should not infer a diagnosis solely from a medication. Many drugs are used for more than one condition, and the provider still needs to document the diagnosis when required by the coding rules.</p>
+<p>The same principle applies to lab and imaging results. An abnormal value may support a provider-documented diagnosis, but coders should not automatically convert a test result into a diagnosis the provider did not make.</p>
+<div class="example unsupported"><strong>Medication-only example</strong><p>The medication list includes metformin, but the provider does not document diabetes anywhere in the encounter.</p><p><strong>Coder response:</strong> Do not assume diabetes solely from the medication. Review the record and follow applicable coding rules.</p></div>
+<div class="example unsupported"><strong>Lab-only example</strong><p>An A1c result is elevated, but the provider does not diagnose diabetes.</p><p><strong>Coder response:</strong> Do not independently diagnose the patient. Coding is based on provider documentation and applicable coding rules.</p></div>
+</div></section>
+
+<section id="history"><div class="c content"><span class="eye">Active vs historical</span><h2>Why “history of” and current disease are not interchangeable</h2>
+<p>One of the most important chart-review skills is distinguishing an active condition from a past condition. A resolved cancer, prior stroke, healed ulcer, or previously treated infection may need a history or status code rather than an active-disease code, depending on the documentation and coding guidelines.</p>
+<p>Never assume that a diagnosis coded in a previous year is still active this year. Current reporting must be based on current documentation and the rules that apply.</p>
+<div class="callout"><strong>Watch the wording:</strong> “history of,” “resolved,” “status post,” “in remission,” “stable,” and “active” can mean very different things for code selection. Read the documentation carefully and verify the code in the Tabular List.</div>
+</div></section>
+
+<section id="meat" class="soft"><div class="c content"><span class="eye">Where MEAT fits</span><h2>Does MEAT determine whether a diagnosis is supported?</h2>
+<p>MEAT—Monitor, Evaluate, Assess/Address, Treat—is a useful teaching framework for spotting evidence that a condition was actively addressed. It can help coders think more critically about the record.</p>
+<p>But MEAT should not become a rigid yes/no formula. One MEAT element does not automatically make a diagnosis reportable, and the absence of an obvious MEAT word does not automatically make a diagnosis invalid.</p>
+<p>The full documentation and official rules still control.</p>
+<p><a href="/what-is-meat-risk-adjustment.html"><strong>Read the complete MEAT guide →</strong></a></p>
+</div></section>
+
+<section id="examples"><div class="c content"><span class="eye">Practice scenarios</span><h2>Supported or unsupported? Work through these examples</h2>
+<div class="example supported"><strong>Scenario 1: Type 2 diabetes</strong><p>Assessment: “Type 2 diabetes with hyperglycemia. A1c 8.4. Increase basal insulin to 24 units nightly.”</p><p><strong>Why it is supported:</strong> The diagnosis is documented, the current status is evaluated, and treatment is adjusted. The coder would still verify the correct ICD-10-CM code and apply any relevant coding guidelines.</p></div>
+<div class="example supported"><strong>Scenario 2: Chronic kidney disease</strong><p>Assessment: “CKD stage 3b, stable. Creatinine reviewed. Continue nephrology follow-up and avoid NSAIDs.”</p><p><strong>Why it is supported:</strong> The condition is documented with specificity, current status, review of relevant data, and a management plan.</p></div>
+<div class="example unsupported"><strong>Scenario 3: Old diagnosis carried forward</strong><p>“COPD” appears on the problem list. The current visit is for a sprained ankle, and there is no mention of COPD elsewhere in the note.</p><p><strong>Why it needs caution:</strong> The current encounter does not clearly show that COPD was addressed. Do not report it automatically without confirming the applicable rules and documentation.</p></div>
+<div class="example unsupported"><strong>Scenario 4: Condition inferred from medication</strong><p>The patient takes levothyroxine, but the provider does not document hypothyroidism in the current record.</p><p><strong>Why it needs caution:</strong> Medication use alone is not a substitute for provider documentation of the diagnosis.</p></div>
+<div class="example unsupported"><strong>Scenario 5: History confused with active disease</strong><p>The note states “History of breast cancer, completed treatment, no evidence of disease.”</p><p><strong>Why it matters:</strong> The documentation describes a history, not necessarily active malignancy. Code selection should reflect the documented status and applicable ICD-10-CM guidance.</p></div>
+</div></section>
+
+<section class="soft"><div class="c content"><span class="eye">Frequently asked questions</span><h2>Supported Diagnosis FAQ</h2>
+<div class="faq"><h3>Can a diagnosis be supported without medication?</h3><p>Yes. Treatment is only one type of support. A condition may be monitored, evaluated, assessed, addressed, or otherwise documented in a way that supports reporting under the applicable rules.</p></div>
+<div class="faq"><h3>Does “stable” count as support?</h3><p>It can be meaningful when the provider is clearly assessing the condition and documenting its current status. The coder should still evaluate the complete note and applicable reporting rules.</p></div>
+<div class="faq"><h3>If the patient has had the disease for years, can I code it every year?</h3><p>Do not assume so. Risk adjustment reporting is based on current documentation and the rules for the applicable program and reporting period.</p></div>
+<div class="faq"><h3>Can coders use clinical indicators to diagnose a condition?</h3><p>Coders should not independently diagnose patients. Clinical indicators can help evaluate documentation, but diagnosis assignment must follow provider documentation and applicable coding rules.</p></div>
+<div class="faq"><h3>What should I do when the documentation is unclear?</h3><p>Follow your organization's compliant query, clarification, or escalation process instead of guessing or selecting a diagnosis based on its risk value.</p></div>
+</div></section>
+
+<section><div class="c"><div class="cta"><h2>Practice deciding what the documentation supports</h2><p>Use MediCode Bootcamp’s free CRC study resources and case-based training to practice the same decisions risk adjustment coders make during chart review.</p><a class="btn" href="/free-study-sessions.html">Free CRC Study Sessions</a><a class="btn" href="/what-is-meat-risk-adjustment.html">Review MEAT</a><a class="btn" href="/self-paced-crc-course.html">Explore CRC Training</a></div>
+<p class="small" style="margin-top:22px"><strong>Educational note:</strong> Coding and risk adjustment requirements vary by setting, payer, program, and model. Always use current ICD-10-CM guidelines, official program requirements, payer policies, and organizational procedures.</p></div></section>
+</main>
+<footer>© <span id="year"></span> MediCode Bootcamp • Risk Adjustment, Documentation &amp; Medical Coding Education</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
