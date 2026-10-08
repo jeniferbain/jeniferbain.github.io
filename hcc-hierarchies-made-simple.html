@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://medicodebootcamp.com/hcc-hierarchies-made-simple.html" />
+<title>HCC Hierarchies Made Simple | MediCode Bootcamp</title>
+<meta name="description" content="Learn how HCC hierarchies work in risk adjustment, why related condition categories are ranked by severity, how hierarchy affects risk scores, and what coders should and should not do." />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="HCC Hierarchies Made Simple" />
+<meta property="og:description" content="A beginner-friendly guide to HCC hierarchy logic, ICD-10-CM coding, model mapping, and common mistakes in risk adjustment." />
+<meta property="og:url" content="https://medicodebootcamp.com/hcc-hierarchies-made-simple.html" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://medicodebootcamp.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.ico" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2XKV5HQW6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K2XKV5HQW6');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"HCC Hierarchies Made Simple","description":"A beginner-friendly guide to how hierarchical condition categories work in risk adjustment and how coders should apply diagnosis coding before hierarchy logic.","author":{"@type":"Person","name":"Jenifer Bain"},"publisher":{"@type":"EducationalOrganization","name":"MediCode Bootcamp","url":"https://medicodebootcamp.com/"},"mainEntityOfPage":"https://medicodebootcamp.com/hcc-hierarchies-made-simple.html"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is an HCC hierarchy?","acceptedAnswer":{"@type":"Answer","text":"An HCC hierarchy ranks related condition categories so the risk adjustment model recognizes the most severe category within that disease hierarchy rather than fully counting multiple related severity levels."}},
+{"@type":"Question","name":"Should coders drop a diagnosis because another HCC is higher in the hierarchy?","acceptedAnswer":{"@type":"Answer","text":"No. Coders should report all diagnoses that are documented, supported, and reportable under ICD-10-CM and applicable program rules. The model applies hierarchy logic after diagnosis coding."}},
+{"@type":"Question","name":"Does every HCC belong to a hierarchy?","acceptedAnswer":{"@type":"Answer","text":"No. Hierarchy relationships apply to selected related condition categories. Coders should use the current model documentation rather than assume every HCC has a higher or lower related category."}}
+]}</script>
+<style>
+:root{--p:#0b6078;--pd:#08495c;--pl:#e5f3f6;--n:#102f43;--t:#2d3740;--m:#66737c;--s:#f7fafb;--b:#dce8eb;--g:#c6932f;--sh:0 14px 35px rgba(16,47,67,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--t);line-height:1.72}a{color:var(--p);text-decoration:none}a:hover{text-decoration:underline}.c{width:min(1030px,calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--b)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:1.18rem;font-weight:850;color:var(--n)}.brand span{color:var(--p)}.links{display:flex;gap:17px;flex-wrap:wrap}.links a{font-size:.92rem;font-weight:700;color:var(--n)}
+.hero{padding:78px 0 68px;background:radial-gradient(circle at 12% 15%,rgba(229,243,246,.98),transparent 40%),linear-gradient(135deg,#fff,#f7fbfc)}.eye{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pl);color:var(--pd);font-size:.78rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}h1,h2,h3{color:var(--n);line-height:1.2}h1{font-size:clamp(2.45rem,5.5vw,4.35rem);letter-spacing:-.04em;margin:18px 0}h2{font-size:clamp(1.8rem,3.7vw,2.5rem)}h3{font-size:1.28rem}.lead{font-size:1.16rem;color:var(--m);max-width:860px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none!important}.primary{background:var(--p);color:#fff}.outline{border:2px solid var(--p);background:#fff;color:var(--p)}
+section{padding:62px 0}.soft{background:var(--s)}.content{max-width:870px}.toc{background:#fff;border:1px solid var(--b);border-radius:16px;padding:24px;box-shadow:var(--sh)}.toc a{display:block;padding:5px 0;font-weight:700}.callout{background:var(--pl);border-left:5px solid var(--p);padding:24px;border-radius:12px;margin:24px 0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:#fff;border:1px solid var(--b);border-radius:15px;padding:22px}.step strong{display:block;color:var(--n);margin-bottom:7px}.hierarchy{display:grid;gap:10px;margin:24px 0}.level{background:#fff;border:1px solid var(--b);border-radius:12px;padding:16px 20px}.level.top{border-left:6px solid var(--g)}.level.mid{border-left:6px solid var(--p)}.level.low{border-left:6px solid var(--n)}.compare{width:100%;border-collapse:collapse;background:#fff}.compare th,.compare td{border:1px solid var(--b);padding:14px;vertical-align:top;text-align:left}.compare th{background:var(--n);color:#fff}.faq{padding:18px 0;border-bottom:1px solid var(--b)}.cta{background:linear-gradient(135deg,var(--n),var(--pd));color:#fff;border-radius:22px;padding:38px}.cta h2{color:#fff}.cta p{color:#dbe8ec}.cta .btn{background:#fff;color:var(--pd);margin:5px}.sources{font-size:.92rem;color:var(--m)}footer{background:#091b26;color:#d7e1e4;padding:30px;text-align:center}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.hero{padding:55px 0}.steps{grid-template-columns:1fr}.compare{display:block;overflow-x:auto}}
+</style>
+</head>
+<body>
+<nav><div class="c nav"><a class="brand" href="/">MediCode <span>Bootcamp</span></a><div class="links"><a href="/">Home</a><a href="/articles-guides.html">Articles &amp; Guides</a><a href="/learning-center.html">Learning Center</a><a href="/what-is-hcc-coding.html">HCC Coding</a></div></div></nav>
+<header class="hero"><div class="c"><span class="eye">HCC Fundamentals</span><h1>HCC Hierarchies Made Simple</h1><p class="lead">Hierarchy is one of the concepts that makes risk adjustment feel different from ordinary diagnosis coding. The key is to remember that coders assign accurate ICD-10-CM diagnoses first—and the risk adjustment model applies hierarchy logic afterward.</p><div class="actions"><a class="btn primary" href="#how">See How Hierarchy Works</a><a class="btn outline" href="/what-is-hcc-coding.html">Review HCC Basics</a></div></div></header>
+<main>
+
+<section><div class="c content"><div class="toc"><strong>In this guide</strong><a href="#meaning">What HCC hierarchy means</a><a href="#why">Why hierarchies exist</a><a href="#how">How hierarchy works</a><a href="#example">A CMS example</a><a href="#coder">What coders should do</a><a href="#mistakes">Common hierarchy mistakes</a><a href="#current">Current model reminder</a></div></div></section>
+
+<section id="meaning" class="soft"><div class="c content"><span class="eye">The concept</span><h2>What does “hierarchical” mean in HCC coding?</h2>
+<p>In the CMS-HCC model, related condition categories can be arranged by clinical severity and expected cost. When a patient has diagnoses that fall into more than one category within the same hierarchy, the model generally keeps the most severe category for that hierarchy instead of fully counting every related severity level.</p>
+<div class="callout"><strong>The most important distinction:</strong> hierarchy logic is part of the risk adjustment model. It does not replace ICD-10-CM coding rules and it does not tell the coder which supported diagnoses to leave off the claim or chart review.</div>
+</div></section>
+
+<section id="why"><div class="c content"><span class="eye">Why it exists</span><h2>Why does CMS use hierarchies?</h2>
+<p>Without hierarchy logic, closely related manifestations of the same disease process could be counted as though they represented completely separate levels of disease burden. CMS uses hierarchies so the model can recognize the most severe manifestation among related condition categories.</p>
+<p>CMS explains that diagnoses are first grouped into condition categories and that hierarchies are then imposed among related categories. After hierarchy logic is applied, those categories become Hierarchical Condition Categories, or HCCs.</p>
+<p>This is one reason memorizing a list of HCC numbers is not enough. A risk adjustment coder needs to understand the relationship between the diagnosis, the condition category, and the model structure.</p>
+</div></section>
+
+<section id="how" class="soft"><div class="c"><span class="eye">The workflow</span><h2>How does an HCC hierarchy work?</h2>
+<div class="steps">
+<div class="step"><strong>1. Document the condition</strong><p>The provider documents the patient's actual diagnoses and current clinical picture.</p></div>
+<div class="step"><strong>2. Assign ICD-10-CM</strong><p>The coder assigns all diagnoses that are supported and reportable under the applicable rules.</p></div>
+<div class="step"><strong>3. Map to categories</strong><p>Selected diagnosis codes map into condition categories under the applicable risk adjustment model.</p></div>
+<div class="step"><strong>4. Apply hierarchy</strong><p>If multiple related categories fall within the same hierarchy, the model retains the category that ranks highest in that hierarchy.</p></div>
+</div>
+<p style="margin-top:22px">The coder's responsibility is steps 1 and 2: accurate documentation review and diagnosis coding. The model handles the hierarchy calculation.</p>
+</div></section>
+
+<section id="example"><div class="c content"><span class="eye">CMS example</span><h2>A simple hierarchy example</h2>
+<p>CMS uses coronary artery disease as an example in its report to Congress on Medicare Advantage risk adjustment. In the 2024 CMS-HCC model, related categories are arranged from more severe to less severe within that hierarchy:</p>
+<div class="hierarchy">
+<div class="level top"><strong>Higher in the hierarchy:</strong> Acute myocardial infarction</div>
+<div class="level mid"><strong>Then:</strong> Unstable angina and other acute ischemic heart disease</div>
+<div class="level mid"><strong>Then:</strong> Angina pectoris</div>
+<div class="level low"><strong>Lower in the hierarchy:</strong> Coronary atherosclerosis / other chronic ischemic heart disease</div>
+</div>
+<p>If a patient has supported diagnoses that fall into more than one of these related categories, the diagnoses are still coded appropriately. The model then applies the hierarchy so the most severe category in that hierarchy drives that portion of the risk score.</p>
+<div class="callout"><strong>Do not “code to the highest HCC.”</strong> If the record supports angina, code the documented angina. If it supports an acute MI, code the acute MI. Never change the diagnosis selection just because one category sits higher in the hierarchy.</div>
+</div></section>
+
+<section id="coder" class="soft"><div class="c content"><span class="eye">Coder responsibility</span><h2>What should the coder do when two diagnoses are in the same hierarchy?</h2>
+<p>Code every diagnosis that is documented, supported, and reportable under ICD-10-CM and the applicable program rules. Do not delete a valid diagnosis simply because another diagnosis falls higher in the HCC hierarchy.</p>
+<p>Hierarchy is a model calculation—not permission to undercode the patient's clinical picture. The chart should still accurately reflect all reportable diagnoses.</p>
+<table class="compare"><thead><tr><th>Incorrect approach</th><th>Correct approach</th></tr></thead><tbody>
+<tr><td>“This HCC is lower, so I won't code it.”</td><td>Code all supported and reportable diagnoses. Let the model apply hierarchy logic.</td></tr>
+<tr><td>“This diagnosis gives a higher HCC, so I'll choose it.”</td><td>Choose the ICD-10-CM code supported by the provider's documentation.</td></tr>
+<tr><td>“Two HCCs are related, so both should increase RAF.”</td><td>Check the current model. Related categories may be subject to hierarchy.</td></tr>
+<tr><td>“The HCC number tells me disease severity by itself.”</td><td>Use the model documentation and category description; do not infer meaning from the number alone.</td></tr>
+</tbody></table>
+</div></section>
+
+<section id="mistakes"><div class="c content"><span class="eye">Common mistakes</span><h2>Where coders get tripped up with HCC hierarchies</h2>
+<p>One common mistake is thinking “hierarchy” means the coder should select only one diagnosis from a disease family. Another is memorizing hierarchy relationships from an older model and assuming they still apply.</p>
+<p>A third mistake is starting with the HCC instead of the diagnosis. The correct sequence is always documentation first, ICD-10-CM second, model mapping third.</p>
+<p>Hierarchy relationships, HCC numbers, and mappings can change when CMS updates the model. That is why a hierarchy chart from a previous model year should never replace the current official mapping and model documentation.</p>
+<p><a href="/supported-vs-unsupported-diagnoses-risk-adjustment.html"><strong>Read: Supported vs. Unsupported Diagnoses →</strong></a><br><a href="/clinical-documentation-barriers-risk-adjustment.html"><strong>Read: Clinical Documentation Barriers →</strong></a></p>
+</div></section>
+
+<section id="current" class="soft"><div class="c content"><span class="eye">Current model</span><h2>Which CMS-HCC model is being used in 2026?</h2>
+<p>For calendar year 2026, CMS completed the three-year phase-in of the 2024 CMS-HCC model for non-PACE Medicare Advantage organizations. CMS states that 100% of those Part C risk scores are calculated using the 2024 CMS-HCC model in 2026.</p>
+<p>The 2024 model was rebuilt around ICD-10-CM and includes revised category structures and hierarchy relationships. That makes current-model references especially important when studying hierarchy.</p>
+<div class="callout"><strong>Study tip:</strong> Learn the concept of hierarchy first. Then practice with the current model. That is much more useful than memorizing old HCC numbers without understanding how the hierarchy works.</div>
+</div></section>
+
+<section><div class="c content"><span class="eye">Frequently asked questions</span><h2>HCC Hierarchy FAQ</h2>
+<div class="faq"><h3>Does the higher HCC mean I should code that diagnosis?</h3><p>No. The diagnosis comes from the medical record and ICD-10-CM rules. The hierarchy does not determine which diagnosis the coder chooses.</p></div>
+<div class="faq"><h3>If two supported diagnoses are in the same hierarchy, do I code both?</h3><p>If both diagnoses are independently documented, supported, and reportable, code them according to the applicable rules. The risk adjustment model applies hierarchy logic afterward.</p></div>
+<div class="faq"><h3>Does every HCC have a hierarchy?</h3><p>No. Hierarchy relationships apply to selected related categories. Use the current model documentation rather than assuming every HCC has a parent or child category.</p></div>
+<div class="faq"><h3>Can hierarchy relationships change?</h3><p>Yes. Model structures, mappings, and HCC relationships can change when CMS updates its risk adjustment model.</p></div>
+</div></section>
+
+<section><div class="c"><div class="cta"><h2>Want to practice hierarchy instead of just reading about it?</h2><p>The live CRC Boot Camp is designed for focused application and review. The full CRC course gives you the complete curriculum with ongoing instructor support, more practice, and more time to build confidence with hierarchy, documentation, ICD-10-CM, and risk adjustment concepts.</p><a class="btn" href="/crc-bootcamp-dates.html">Explore the CRC Boot Camp</a><a class="btn" href="/self-paced-crc-course.html">View the Full CRC Course</a></div>
+<p class="sources" style="margin-top:22px"><strong>Source note:</strong> This guide was shaped by MediCode Bootcamp's CRC hierarchy teaching and checked against current CMS risk adjustment materials.</p>
+<p class="sources"><strong>Official references:</strong> <a href="https://www.cms.gov/files/document/report-congress-risk-adjustment-medicare-advantage-december-2024.pdf" target="_blank" rel="noopener">CMS Report to Congress: Risk Adjustment in Medicare Advantage</a> • <a href="https://www.cms.gov/medicare/payment/medicare-advantage-rates-statistics/risk-adjustment/2024-model-software-icd-10-mappings" target="_blank" rel="noopener">CMS 2024 Model Software/ICD-10 Mappings</a> • <a href="https://www.cms.gov/newsroom/fact-sheets/2026-medicare-advantage-part-d-rate-announcement" target="_blank" rel="noopener">CMS 2026 Rate Announcement</a></p>
+</div></section>
+
+</main>
+<footer>© <span id="year"></span> MediCode Bootcamp • HCC, Risk Adjustment &amp; Medical Coding Education</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
